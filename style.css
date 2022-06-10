@@ -1,0 +1,131 @@
+:root{
+
+    --clr-primary-900: #06283D;
+    --clr-primary-700: #1363DF;
+    --clr-primary-600: #47B5FF;
+    --clr-primary-400: #DFF6FF;
+
+    --ff-primary: 'Poppins', sans-serif;
+
+    --ff-weight-semi: 600;
+    --ff-weight-extra: 800;
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: var(--ff-primary);
+}
+
+body{
+    background-color: var(--clr-primary-600);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: min(90%,25rem);
+    min-height: 30rem;
+    border-radius: 0.5rem;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--clr-primary-900);
+    color: var(--clr-primary-400);
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.task-container{
+    background-color: var(--clr-primary-400);
+    border-radius: 0 0 0.5rem 0.5rem;
+    min-height: 30rem;
+}
+
+.task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 0 0.5rem;
+    min-height: 5rem;
+    cursor: pointer;
+}
+
+.done-delete{
+    display: flex;
+    align-items: center;
+    min-height: 5rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+
+
+.done-delete > *{
+    padding: 0.5rem;
+    text-align: center;
+    min-height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.done-delete > *:hover{
+    opacity: 50%;
+}
+
+.done{
+    background-color: lightgreen;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.delete{
+    background-color: lightcoral;
+}
+
+.button-plus{
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.3s linear;
+}
+
+.button-plus:hover{
+    font-size: 3rem;
+}
+ 
+.task-text{
+    border: none;
+    background-color: var(--clr-primary-400);
+    width: min(90%,13rem);
+    font-size: 1.5rem;
+}
+
+.add{
+    display: flex;
+    align-items: center;
+}
+
+#add{
+    height: 1.5rem;
+}
+
+.todo{
+    display: flex;
+    align-items: center;
+}
